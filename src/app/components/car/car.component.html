@@ -1,0 +1,22 @@
+
+  <div class="card" style="width: 50rem;">
+        <div class="card-header">
+            {{name}} Details
+        </div>
+        <div class="card-body">
+            <ul>
+                <li>Mileage: {{mileage}}</li>
+                <li>Tank: {{tank}}</li>
+                <li>Fuel: {{fuel}}</li>
+            </ul>
+
+            <h4>Properties</h4>
+            <ul>
+                <li *ngFor="let property of properties">
+                    {{property}}
+                </li>
+            </ul>
+            <button (click)="onclickHandlerDrive($event)">Go-go-go!!!</button>
+            <button type="button" class="btn btn-success" *ngIf="fuel < 10 " (click)="onclickHandlerRefill($event)">Refill</button>
+        </div>
+ </div>
